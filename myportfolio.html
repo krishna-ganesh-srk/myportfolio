@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MY PORTFOLIO</title>
+  <style>
+    * {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f4f6fa;
+      color: #333;
+    }
+
+    /* ✨ Floating Glassmorphism Search Bar */
+    .searchbar {
+      width: 80%;
+      margin: 0 auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .searchbar input {
+      width: 60%;
+      height: 50px;
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      outline: none;
+      margin-right: 10px;
+    }
+
+    .searchbar button {
+      height: 50px;
+      font-size: 18px;
+      padding: 0 20px;
+      border-radius: 12px;
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .searchbar button:hover {
+      background-color: #574b90;
+    }
+
+    header {
+      
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 60px;
+      padding-bottom: 40px;
+      background: linear-gradient(to right, #6c63ff, #b69df8);
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 30px 0 20px;
+    }
+
+    .button1 {
+        display: inline;
+        color: bisque;
+      border: none;
+      height: 40px;
+      width: 140px;
+      border-radius: 10px;
+      background-color: rgb(190, 77, 255);
+ 
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button1:hover {
+      background-color: #6c63ff;
+      color: white;
+    }
+
+    section {
+      background-color: white;
+      margin: 40px auto;
+      padding: 40px 20px;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    img {
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #6c63ff;
+      margin-bottom: 20px;
+    }
+
+       section input,
+    section textarea {
+      width: 60%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+   
+
+
+    section button {
+    
+
+      padding: 12px 24px;
+      margin-top: 10px;
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    section button:hover {
+      background-color: #574b90;
+    }
+
+    footer {
+      color: #fff;
+      background-color: #333;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .submit1 {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 15px;
+      border-radius: 50%;
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+    }
+
+    .submit1:hover {
+      background-color: #574b90;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="searchbar">
+      <h1>SEARCH</h1>
+      <input type="text" id="in" placeholder="Search here...">
+      <button onclick="performSearch()">Go</button>
+    </div>
+
+    <h1>My Portfolio</h1>
+    <a href="#about"><button class="button1">About</button></a>
+    <a href="#skills"><button class="button1">Skills</button></a>
+    <a href="#education"><button class="button1">Education</button></a>
+    <a href="#contact"><button class="button1">Projects</button></a>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>BHIMADA HARI VENKATA KRISHNA GANESH</h2>
+      <img src="data:image/jpeg;base64,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" alt="img1" />
+      <p>As an ambitious and dedicated engineering student pursuing Computer Science,<br>
+        I am enthusiastic about harnessing my technical knowledge, <br>
+        problem-solving skills and creativity to make a meaningful impact in the world of engineering.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ol>
+        <li>Problem Solving</li>
+        <li>Creative Thinking</li>
+        <li>Data Analysis</li>
+        <li>Adaptability to Change</li>
+        <li>Programming Languages: C, Java, Python, R</li>
+        <li>Web Tech: HTML, CSS, JavaScript, PHP, react, spring, spring boot</li>
+      </ol>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>B. Tech Computer Science (CSE) from SRKR College of Engineering – CGPA: 8.5</li>
+        <li>Intermediate from Sasi New Gen Jr College – CGPA: 9.4</li>
+        <li>SSC from Sri Chaitanya School – CGPA: 9.5</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="fullname">Enter Name</label><br>
+        <input type="text" id="fullname"><br>
+        <label for="email">Enter Email</label><br>
+        <input type="email" id="email"><br>
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender"><label for="male">Male</label>
+        <input type="radio" id="female" name="gender"><label for="female">Female</label><br>
+        <b>Select Interest:</b><br>
+        <input type="checkbox" id="code"><label for="code">Coding</label>
+        <input type="checkbox" id="read"><label for="read">Reading</label><br>
+        <label for="bio">Enter Details</label><br>
+        <textarea id="bio" rows="4" cols="40"></textarea><br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <button class="submit1" onclick="scrollToTop()">TOP</button>
+
+  <footer>
+    &copy; 2025 | Designed by Ganesh
+  </footer>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function performSearch() {
+      const query = document.getElementById("in").value;
+      if (query.trim() !== "") {
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, "_blank");
+      }
+    }
+  </script>
+</body>
+</html>
